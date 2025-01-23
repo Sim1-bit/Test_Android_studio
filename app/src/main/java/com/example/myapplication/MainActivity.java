@@ -5,11 +5,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.CheckBox;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RadioButton;
 
@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity
             return insets;
         });
         recuperaWidget();
+
+        //Cambio activity
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);
     }
 
     private void recuperaWidget()
@@ -69,6 +73,11 @@ public class MainActivity extends AppCompatActivity
         lvElenco.setAdapter(adapter);
 
         System.out.println(_nome + '\n' + _cognome + '\n' + _patente + '\n' + _sesso);
+
+
+        //Cambio activity
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);
     }
 
     public void etName_click(View v)
