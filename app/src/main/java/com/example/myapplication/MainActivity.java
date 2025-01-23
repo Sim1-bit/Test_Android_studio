@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity
         recuperaWidget();
 
         //Cambio activity
-        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-        startActivity(intent);
+        /*Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);*/
     }
 
     private void recuperaWidget()

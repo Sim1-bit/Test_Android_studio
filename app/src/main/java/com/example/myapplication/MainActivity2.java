@@ -51,9 +51,9 @@ public class MainActivity2 extends AppCompatActivity
 
     private void recuperaWidget()
     {
-        nome = (EditText) findViewById(R.id.Name);
-        cognome = (EditText) findViewById(R.id.Surname);
-        sesso = (RadioGroup) findViewById(R.id.radioGroup);
+        nome = (EditText) findViewById(R.id.name2);
+        cognome = (EditText) findViewById(R.id.surname2);
+        sesso = (RadioGroup) findViewById(R.id.radioGroup2);
         tecnologia = (CheckBox) findViewById(R.id.hobby);
         arte = (CheckBox) findViewById(R.id.hobby1);
         musica = (CheckBox) findViewById(R.id.hobby2);
@@ -62,7 +62,7 @@ public class MainActivity2 extends AppCompatActivity
 
         data = (DatePicker) findViewById(R.id.calendarView);
 
-        riassunto = (TextView) findViewById(R.id.textView);
+        riassunto = (TextView) findViewById(R.id.textView3);
 
         genera = (Button) findViewById(R.id.button);
 
@@ -71,27 +71,28 @@ public class MainActivity2 extends AppCompatActivity
         mDay = data.getDayOfMonth();
     }
 
-    public void btMostra_click(View v)
+    public void btMostra_click2(View v)
     {
-        String aux = nome.getText().toString() + "\n";
-        aux += cognome.getText().toString() + "\n";
+        String aux = nome.getText().toString() + " ";
+        aux += cognome.getText().toString() + " ";
 
 
-        if(sesso.getCheckedRadioButtonId() == R.id.Male)
+        if(sesso.getCheckedRadioButtonId() == R.id.Male2)
             aux += "Uomo" + "\n";
-        else if (sesso.getCheckedRadioButtonId() == R.id.Male)
+        else if (sesso.getCheckedRadioButtonId() == R.id.Female2)
             aux += "Donna" + "\n";
 
         if(tecnologia.isChecked())
-           aux += "tecnologia" + " \n";
+           aux += "tecnologia" + " ";
         if(arte.isChecked())
-            aux += "arte" + " \n";
+            aux += "arte" + " ";
         if(musica.isChecked())
-            aux += "musica" + " \n";
+            aux += "musica" + " ";
         if(sport.isChecked())
-            aux += "sport" + " \n";
+            aux += "sport" + " ";
         if(auto.isChecked())
-            aux += "auto" + " \n";
+            aux += "auto" + " ";
+        aux += "\n";
 
         aux += mDay + "/" + mMonth + "/" + mYear + "\n";
 
